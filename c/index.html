@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N4-Studios | Clipboard Copy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #222;
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+    }
+    main {
+      background: white;
+      width: min(90%, 440px);
+      padding: 32px;
+      border-radius: 14px;
+      box-shadow: 0 8px 30px rgba(0,0,0,.08);
+      text-align: center;
+    }
+    button {
+      border: 0;
+      border-radius: 8px;
+      padding: 12px 20px;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover { background: #1d4ed8; }
+    #status { min-height: 24px; margin-top: 18px; }
+    #copyText {
+      text-align: left;
+      overflow-wrap: anywhere;
+      padding: 12px;
+      background: #f1f5f9;
+      border-radius: 8px;
+      font-family: monospace;
+    }
+  </style>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Clipboard Copy</h1>
+    <p>The page will attempt to copy the configured text automatically.</p>
+    <p id="copyText"></p>
+    <button id="copyButton" type="button">Copy to Clipboard</button>
+    <p id="status" role="status" aria-live="polite">Preparing copy...</p>
+  </main>
+</body>
+</html>
